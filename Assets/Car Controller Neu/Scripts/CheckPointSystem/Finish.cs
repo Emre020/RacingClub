@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Finish : MonoBehaviour
 {
     public Text YouWin;
 
+    public int CheckPointCounter;
+
     bool checkPointReached = false;
+
+    void Start()
+    {
+        YouWin.SetActive(false);    
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -16,14 +22,17 @@ public class Finish : MonoBehaviour
         {
             if (checkPointReached == true)
             {
-
-                //SceneManager.LoadScene("Finish");
+                YouWin.SetActive(true);
+                GameObject.Find("YellowCar 1").GetComponent<CarController>().enabled = false;
             }
         }
 
-        if (other.gameObject.name == "Checkpoint")
+        CheckPointCounter++;
+
+        if (CheckPointCounter == 6)
         {
             checkPointReached = true;
+            Debug.Log("Finish unlocked!");
         }
     }
 }
