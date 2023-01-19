@@ -6,7 +6,7 @@ using UnityEngine;
 /// Car sound controller, for play car sound effects
 /// </summary>
 
-[RequireComponent (typeof (CarController))]
+[RequireComponent (typeof (CarControllerAdvanced))]
 public class CarSoundController :MonoBehaviour
 {
 
@@ -21,14 +21,14 @@ public class CarSoundController :MonoBehaviour
 	[SerializeField] float MinSlipSound = 0.15f;
 	[SerializeField] float MaxSlipForSound = 1f;
 
-	CarController CarController;
+	CarControllerAdvanced CarController;
 
 	float MaxRPM { get { return CarController.GetMaxRPM; } }
 	float EngineRPM { get { return CarController.EngineRPM; } }
 
 	private void Awake ()
 	{
-		CarController = GetComponent<CarController> ();
+		CarController = GetComponent<CarControllerAdvanced> ();
 		CarController.BackFireAction += PlayBackfire;
 	}
 

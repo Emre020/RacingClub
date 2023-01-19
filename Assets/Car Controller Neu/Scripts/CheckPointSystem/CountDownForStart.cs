@@ -35,6 +35,6 @@ public class CountDownForStart : MonoBehaviour
         countDownToStart.SetActive(true);
         countDownToStart.SetActive(false);
 
-        GameObject.Find("YellowCar 1").GetComponent<CarController>().enabled = true;
+        GameObject.Find("YellowCar 1").GetComponent<CarControllerAdvanced>().enabled = true;
     }
 }

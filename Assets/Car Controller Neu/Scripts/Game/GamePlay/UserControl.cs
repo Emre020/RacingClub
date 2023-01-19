@@ -5,11 +5,11 @@ using UnityEngine;
 /// <summary>
 /// For user multiplatform control.
 /// </summary>
-[RequireComponent (typeof (CarController))]
+[RequireComponent (typeof (CarControllerAdvanced))]
 public class UserControl :MonoBehaviour
 {
 
-	CarController ControlledCar;
+	CarControllerAdvanced ControlledCar;
 
 	public float Horizontal { get; private set; }
 	public float Vertical { get; private set; }
@@ -19,7 +19,7 @@ public class UserControl :MonoBehaviour
 
 	private void Awake ()
 	{
-		ControlledCar = GetComponent<CarController> ();
+		ControlledCar = GetComponent<CarControllerAdvanced> ();
 		CurrentUIControl = FindObjectOfType<MobileControlUI> ();
 	}
 

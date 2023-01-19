@@ -12,12 +12,12 @@ public class GameController :MonoBehaviour
 	[SerializeField] KeyCode NextCarKey = KeyCode.N;
 	[SerializeField] UnityEngine.UI.Button NextCarButton;
 	public static GameController Instance;
-	public static CarController PlayerCar { get { return Instance.m_PlayerCar; } }
+	public static CarControllerAdvanced PlayerCar { get { return Instance.m_PlayerCar; } }
 	public static bool RaceIsStarted { get { return true; } }
 	public static bool RaceIsEnded { get { return false; } }
 
-	CarController m_PlayerCar;
-	List<CarController> Cars = new List<CarController>();
+	CarControllerAdvanced m_PlayerCar;
+	List<CarControllerAdvanced> Cars = new List<CarControllerAdvanced>();
 	int CurrentCarIndex = 0;
 
 	protected virtual void Awake ()
@@ -26,7 +26,7 @@ public class GameController :MonoBehaviour
 		Instance = this;
 
 		//Find all cars in current game.
-		Cars.AddRange (GameObject.FindObjectsOfType<CarController> ());
+		Cars.AddRange (GameObject.FindObjectsOfType<CarControllerAdvanced> ());
 		Cars = Cars.OrderBy (c => c.name).ToList();
 
 		foreach (var car in Cars)

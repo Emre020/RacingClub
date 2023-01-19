@@ -17,7 +17,7 @@ public class CameraController :Singleton<CameraController>
 	int ActivePresetIndex = 0;
 	CameraPreset ActivePreset;
 
-	CarController TargetCar { get { return GameController.PlayerCar; } }
+	CarControllerAdvanced TargetCar { get { return GameController.PlayerCar; } }
 	GameController GameController { get { return GameController.Instance; } }
 
 	float SqrMinDistance;

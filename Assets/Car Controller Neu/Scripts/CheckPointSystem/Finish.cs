@@ -23,7 +23,7 @@ public class Finish : MonoBehaviour
             if (checkPointReached == true)
             {
                 YouWin.SetActive(true);
-                GameObject.Find("YellowCar 1").GetComponent<CarController>().enabled = false;
+                GameObject.Find("YellowCar 1").GetComponent<CarControllerAdvanced>().enabled = false;
             }
         }
 

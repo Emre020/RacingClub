@@ -6,7 +6,7 @@ using UnityEngine;
 /// To tilt the car body (Visually only).
 /// </summary>
 
-[RequireComponent (typeof (CarController))]
+[RequireComponent (typeof (CarControllerAdvanced))]
 public class BodyTilt :MonoBehaviour
 {
 
@@ -16,12 +16,12 @@ public class BodyTilt :MonoBehaviour
 	[SerializeField] float RearAngleVelocityMultiplayer = 0.4f;     //Rotation angle multiplier when moving backwards.
 	[SerializeField] float MaxTiltOnSpeed = 60;                     //The speed at which the maximum tilt is reached.
 
-	CarController Car;
+	CarControllerAdvanced Car;
 	float Angle;
 
 	private void Awake ()
 	{
-		Car = GetComponent<CarController> ();
+		Car = GetComponent<CarControllerAdvanced> ();
 	}
 
 	private void Update ()

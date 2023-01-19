@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 
 [RequireComponent (typeof (Rigidbody))]
-public class CarController :MonoBehaviour
+public class CarControllerAdvanced :MonoBehaviour
 {
 
 	[SerializeField] Wheel FrontLeftWheel;

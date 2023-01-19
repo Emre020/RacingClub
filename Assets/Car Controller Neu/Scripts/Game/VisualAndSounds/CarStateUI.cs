@@ -20,7 +20,7 @@ public class CarStateUI :MonoBehaviour
 	[SerializeField] float MaxArrowAngle = -315f;
 
 	int CurrentFrame;
-	CarController SelectedCar { get { return GameController.PlayerCar; } }
+	CarControllerAdvanced SelectedCar { get { return GameController.PlayerCar; } }
 
 	private void Update ()
 	{
