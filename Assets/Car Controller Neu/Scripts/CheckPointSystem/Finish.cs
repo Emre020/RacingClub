@@ -29,7 +29,7 @@ public class Finish : MonoBehaviour
 
         CheckPointCounter++;
 
-        if (CheckPointCounter == 6)
+        if (CheckPointCounter == 5)
         {
             checkPointReached = true;
             Debug.Log("Finish unlocked!");

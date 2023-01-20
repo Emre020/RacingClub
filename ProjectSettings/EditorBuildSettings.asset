@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/SlimUI/Tech Menu/Scenes/City.unity
     guid: a797fa8dc8d369d469ffa5e670be0b71
+  - enabled: 1
+    path: Assets/LevelScenes/TurnTheGameOn/RacingCity/RacingCity.unity
+    guid: a70584898fd5452eb2d067b9ce158406
+  - enabled: 1
+    path: Assets/LevelScenes/Level1.unity
+    guid: d46d7da9dc4a87b46ac6457849053359
   m_configObjects: {}
