@@ -11,7 +11,7 @@ public class EnemyReachedFinish : MonoBehaviour
         EnemyBoss.SetActive(false);
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Enemy"))
         {

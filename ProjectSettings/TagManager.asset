@@ -8,6 +8,8 @@ TagManager:
   - Ckeckpoint
   - Checkpoint
   - Enemy
+  - Checkpoints
+  - Wall
   layers:
   - Default
   - TransparentFX
