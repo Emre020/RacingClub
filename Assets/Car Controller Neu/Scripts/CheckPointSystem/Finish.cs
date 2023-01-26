@@ -6,16 +6,18 @@ using UnityEngine.UI;
 public class Finish : MonoBehaviour
 {
     public Text YouWin;
-    //public Text YouLose;
+    public Text YouLose;
     //public Text EnemyBoss;
 
     public int CheckPointCounter;
 
     bool checkPointReached = false;
 
+    public CountDownForStart countDownForStart;
+
     void Start()
     {
-        //YouLose.SetActive(false);
+        YouLose.SetActive(false);
         //EnemyBoss.SetActive(false);
         YouWin.SetActive(false);
     }
@@ -25,28 +27,47 @@ public class Finish : MonoBehaviour
         if (other.gameObject.name == "Finish")
         {
             GameObject.Find("YellowCar 1").GetComponent<CarControllerAdvanced>().enabled = false;
+            GameObject.Find("YellowCar 1").GetComponent<CarSoundController>().enabled = false;
+
             if (checkPointReached == true)
             {
                 YouWin.SetActive(true);
+
                 GameObject.Find("YellowCar 1").GetComponent<CarControllerAdvanced>().enabled = false;
-            } 
-           /* else if (other.CompareTag ("Enemy"))
+                GameObject.Find("YellowCar 1").GetComponent<CarSoundController>().enabled = false;
+            }
+
+            countDownForStart.StopTimer();
+
+            /* else if (other.CompareTag ("Enemy"))
+             {
+                 GameObject.Find("YellowCar 1").GetComponent<Finish>().CheckPointCounter = -100;
+             }*/
+
+            if (CheckPointCounter >= 5 && countDownForStart.currentTime <= countDownForStart.TimeForWin)
             {
-                GameObject.Find("YellowCar 1").GetComponent<Finish>().CheckPointCounter = -100;
-            }*/
+                checkPointReached = true;
+                YouWin.SetActive(true);
+                Debug.Log("Finish unlocked!");
+            }
+            else
+            {
+                YouLose.SetActive(true);
+                //EnemyBoss.SetActive(true);
+            }
         }
 
         CheckPointCounter++;
 
-        if (CheckPointCounter == 5)
+        /*if (CheckPointCounter == 5 && countDownForStart.currentTime <= countDownForStart.TimeForWin)
         {
             checkPointReached = true;
             Debug.Log("Finish unlocked!");
         }
         else
         {
-            //YouLose.SetActive(true);
+            YouLose.SetActive(true);
             //EnemyBoss.SetActive(true);
-        }
+        }*/
     }
 }

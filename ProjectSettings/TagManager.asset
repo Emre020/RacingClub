@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Checkpoints
   - Wall
+  - AITarget
   layers:
   - Default
   - TransparentFX

@@ -1,14 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.UI;
 
 public class CountDownForStart : MonoBehaviour
 {
     public GameObject countDownToStart;
 
+    bool timerActive = false;
+    public float currentTime;
+    public float TimeForWin;
+    public Text currentTimeText;
+
     private void Start()
     {
+        currentTime = 0;
         StartCoroutine(CountDownRoutine());
     }
 
@@ -36,5 +43,28 @@ public class CountDownForStart : MonoBehaviour
         countDownToStart.SetActive(false);
 
         GameObject.Find("YellowCar 1").GetComponent<CarControllerAdvanced>().enabled = true;
+        StartTimer();
+    }
+
+    void Update()
+    {
+        if (timerActive == true)
+        {
+            currentTime = currentTime + Time.deltaTime;
+        }
+        TimeSpan time = TimeSpan.FromSeconds(currentTime);
+        currentTimeText.text = time.ToString(@"mm\:ss\:ff");
+    }
+
+    public void StartTimer()
+    {
+        timerActive = true;
+    }
+
+    public void StopTimer()
+    {
+        timerActive = false;
+        //timerActive.color = Color.green;
     }
 }
+
