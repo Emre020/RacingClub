@@ -6,34 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
-      value: 224247031146467a01023f2909054d151358373c293a25313e3d5d1fedf77b19eeeb05e2fe05102a3c10ec3d172a5500de051e45e305031f08
-      flags: 0
-    RecentlyUsedScenePath-1:
-      value: 224247031146466f081d1811132651155934113e351e292828252d32e1eb7b1ce7ea39dae43f31392a4dc82e0d3a4f2afc031d12
-      flags: 0
-    RecentlyUsedScenePath-2:
       value: 224247031146466f081d1811132651155934113e351e292828252d32e1eb7b1ce7ea39dae43f31392a4dcb3909314f2afc031d12
       flags: 0
-    RecentlyUsedScenePath-3:
+    RecentlyUsedScenePath-1:
       value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
       flags: 0
-    RecentlyUsedScenePath-4:
+    RecentlyUsedScenePath-2:
       value: 224247031146466f081d18111326511559231d393866333e243d04
       flags: 0
-    RecentlyUsedScenePath-5:
+    RecentlyUsedScenePath-3:
       value: 224247031146466f081d186c052d56040f
       flags: 0
-    RecentlyUsedScenePath-6:
+    RecentlyUsedScenePath-4:
       value: 224247031146467d1f0b09101f22525e0319113e35
       flags: 0
-    RecentlyUsedScenePath-7:
+    RecentlyUsedScenePath-5:
+      value: 22424703114646560400050f1133102f32121525630c233d2267083debf42d
+      flags: 0
+    RecentlyUsedScenePath-6:
       value: 22424703114646770818092e23205a1e1304571e393a2804252c3a32efe51b36add537eaee34381f3016f673363f0236fc0d2a02e212441e1f07e917
       flags: 0
-    RecentlyUsedScenePath-8:
+    RecentlyUsedScenePath-7:
       value: 22424703114646770818092e23205a1e13045706293e233c7c67083debf42d
       flags: 0
+    RecentlyUsedScenePath-8:
+      value: 224247031146466801070117396c6b15151f58072926337f1e2a183de7f37b0ce7e43ea9c33f32337931ec390a3b4f2afc031d12
+      flags: 0
     RecentlyUsedScenePath-9:
-      value: 22424703114646560400050f1133102f32121525630c233d2267083debf42d
+      value: 22424703114646770818092e23205a1e130457072d21281d2827087df7ee3d2cfb
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
