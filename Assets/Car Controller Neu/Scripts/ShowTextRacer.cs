@@ -11,9 +11,4 @@ public class ShowTextRacer : MonoBehaviour
     {
         FindARacer.SetActive(true);
     }
-
-    void Update()
-    {
-         Destroy(gameObject, 5f);
-    }
 }

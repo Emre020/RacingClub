@@ -7,7 +7,12 @@ public class Finish : MonoBehaviour
 {
     public Text YouWin;
     public Text YouLose;
+
+    public Image Continue;
+    public Image Restart;
     //public Text EnemyBoss;
+
+    public float delayPanel = 7f;
 
     public int CheckPointCounter;
 
@@ -20,6 +25,8 @@ public class Finish : MonoBehaviour
         YouLose.SetActive(false);
         //EnemyBoss.SetActive(false);
         YouWin.SetActive(false);
+        Continue.SetActive(false);
+        Restart.SetActive(false);
     }
 
     void OnTriggerEnter(Collider other)
@@ -35,6 +42,10 @@ public class Finish : MonoBehaviour
 
                 GameObject.Find("YellowCar 1").GetComponent<CarControllerAdvanced>().enabled = false;
                 GameObject.Find("YellowCar 1").GetComponent<CarSoundController>().enabled = false;
+
+                StartCoroutine(LoadPanel(delayPanel));
+
+                Continue.SetActive(true);
             }
 
             countDownForStart.StopTimer();
@@ -53,6 +64,8 @@ public class Finish : MonoBehaviour
             else
             {
                 YouLose.SetActive(true);
+                StartCoroutine(LoadPanel(delayPanel));
+                Restart.SetActive(true);
                 //EnemyBoss.SetActive(true);
             }
         }
@@ -69,5 +82,10 @@ public class Finish : MonoBehaviour
             YouLose.SetActive(true);
             //EnemyBoss.SetActive(true);
         }*/
+    }
+
+    IEnumerator LoadPanel(float delay)
+    {
+        yield return new WaitForSeconds(delay);
     }
 }
