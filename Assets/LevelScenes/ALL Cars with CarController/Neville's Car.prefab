@@ -18595,7 +18595,7 @@ GameObject:
   - component: {fileID: 5866956949718043037}
   m_Layer: 0
   m_Name: Chev_Carbody
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18700,7 +18700,7 @@ GameObject:
   - component: {fileID: 5866956949798431646}
   m_Layer: 0
   m_Name: Chev_Hood
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

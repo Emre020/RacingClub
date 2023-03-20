@@ -14,11 +14,15 @@ public class SwitchLevel : MonoBehaviour
     public float delayEnemyText = 15f;
     public string OpenLevel = "Level1";
 
+    private GameObject[] cars;
+
     void Start()
     {
         SwitchScene.SetActive(false);
         FadeInToLevel.SetActive(false);
         ShowEnemyText.SetActive(false);
+
+        cars = GameObject.FindGameObjectsWithTag("Car");
     }
 
     void OnTriggerStay(Collider other)
@@ -29,7 +33,14 @@ public class SwitchLevel : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.R))
             {
-                GameObject.Find("YellowCar 1").GetComponent<CarControllerAdvanced>().enabled = false;
+                //cars = GameObject.FindGameObjectsWithTag("Car");
+
+                foreach (GameObject car in cars)
+                {
+                    car.GetComponent<CarControllerAdvanced>()/*.enabled = false*/;
+                }
+
+                //GameObject.Find("YellowCar 1").GetComponent<CarControllerAdvanced>().enabled = false;
                 ShowEnemyText.SetActive(true);
                 StartCoroutine(LoadEnemytextAfterDelay(delay));
                 FadeInToLevel.SetActive(true);

@@ -10,9 +10,9 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField] private bool isPaused;
 
-    [Header("FPS")]
-    [SerializeField] private Text FPSCounter;
-    [SerializeField] private Text FPSText;
+    //[Header("FPS")]
+    //[SerializeField] private Text FPSCounter;
+    //[SerializeField] private Text FPSText;
 
     private void Update()
     {
@@ -36,8 +36,8 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0;
         AudioListener.pause = true;
         pauseMenuUI.SetActive(true);
-        FPSCounter.SetActive(false);
-        FPSText.SetActive(false);
+        //FPSCounter.SetActive(false);
+        //FPSText.SetActive(false);
     }
 
     public void DeactivateMenu()
@@ -46,8 +46,8 @@ public class PauseMenu : MonoBehaviour
         AudioListener.pause = false;
         pauseMenuUI.SetActive(false);
         isPaused = false;
-        FPSCounter.SetActive(true);
-        FPSText.SetActive(true);
+        //FPSCounter.SetActive(true);
+        //FPSText.SetActive(true);
     }
 
     public void Menu()

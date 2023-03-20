@@ -12,7 +12,7 @@ public class Finish : MonoBehaviour
     public Image Restart;
     //public Text EnemyBoss;
 
-    public float delayPanel = 7f;
+    public float delayPanel = 7.0f;
 
     public int CheckPointCounter;
 
@@ -59,6 +59,9 @@ public class Finish : MonoBehaviour
             {
                 checkPointReached = true;
                 YouWin.SetActive(true);
+                Continue.SetActive(true);
+                StartCoroutine(LoadPanel(delayPanel));
+                
                 Debug.Log("Finish unlocked!");
             }
             else

@@ -19003,7 +19003,7 @@ GameObject:
   - component: {fileID: 8051700280161863636}
   m_Layer: 0
   m_Name: PP_Body
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
