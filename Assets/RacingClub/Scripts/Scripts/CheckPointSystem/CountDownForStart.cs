@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class CountDownForStart : MonoBehaviour
 {
+    Finish script;
+    private GameObject[] cars;
+
     public GameObject countDownToStart;
 
     bool timerActive = false;
@@ -15,7 +18,7 @@ public class CountDownForStart : MonoBehaviour
 
     private void Start()
     {
-        currentTime = 0;
+        GameObject.Find("StartCar").GetComponent<CarControllerAdvanced>().enabled = false;
         StartCoroutine(CountDownRoutine());
     }
 
@@ -42,8 +45,11 @@ public class CountDownForStart : MonoBehaviour
         countDownToStart.SetActive(true);
         countDownToStart.SetActive(false);
 
-        GameObject.Find("YellowCar 1").GetComponent<CarControllerAdvanced>().enabled = true;
+        
+        GameObject.Find("StartCar").GetComponent<CarControllerAdvanced>().enabled = true;
         StartTimer();
+        GameObject.Find("StartCar").GetComponent<Finish>().CheckPointCounter = 0;
+        GameObject.Find("StartCar").GetComponent<CountDownForStart>().currentTime = 0;
     }
 
     void Update()

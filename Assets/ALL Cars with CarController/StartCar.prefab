@@ -15082,6 +15082,7 @@ GameObject:
   - component: {fileID: 6753542596797280210}
   - component: {fileID: 6753542596797280211}
   - component: {fileID: 6753542596797280221}
+  - component: {fileID: 9066581455172173432}
   m_Layer: 6
   m_Name: StartCar
   m_TagString: Car
@@ -15330,7 +15331,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6753542596797280208}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cefcff7e9ecf0e418fb0bfb75b4d9eb, type: 3}
   m_Name: 
@@ -15361,6 +15362,18 @@ MonoBehaviour:
   initialIconRotation: 0
   clampIconInBorder: 1
   clampDistance: 100
+--- !u!114 &9066581455172173432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6753542596797280208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3064cffdea8a184db23411a1b93eedb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6753542596839278907
 GameObject:
   m_ObjectHideFlags: 0

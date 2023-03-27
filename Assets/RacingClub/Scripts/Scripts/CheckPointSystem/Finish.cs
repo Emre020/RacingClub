@@ -33,15 +33,15 @@ public class Finish : MonoBehaviour
     {
         if (other.gameObject.name == "Finish")
         {
-            GameObject.Find("YellowCar 1").GetComponent<CarControllerAdvanced>().enabled = false;
-            GameObject.Find("YellowCar 1").GetComponent<CarSoundController>().enabled = false;
+            GameObject.Find("StartCar").GetComponent<CarControllerAdvanced>().enabled = false;
+            GameObject.Find("StartCar").GetComponent<CarSoundController>().enabled = false;
 
             if (checkPointReached == true)
             {
                 YouWin.SetActive(true);
 
-                GameObject.Find("YellowCar 1").GetComponent<CarControllerAdvanced>().enabled = false;
-                GameObject.Find("YellowCar 1").GetComponent<CarSoundController>().enabled = false;
+                //GameObject.Find("StartCar").GetComponent<CarControllerAdvanced>().enabled = false;
+                //GameObject.Find("StartCar").GetComponent<CarSoundController>().enabled = false;
 
                 StartCoroutine(LoadPanel(delayPanel));
 

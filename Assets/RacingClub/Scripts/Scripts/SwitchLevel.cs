@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class SwitchLevel : MonoBehaviour
 {
+    public Finish script;
+
     public Text SwitchScene;
     public Image FadeInToLevel;
     public Image ShowEnemyText;
@@ -33,14 +35,14 @@ public class SwitchLevel : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.R))
             {
-                //cars = GameObject.FindGameObjectsWithTag("Car");
+                cars = GameObject.FindGameObjectsWithTag("Car");
 
                 foreach (GameObject car in cars)
                 {
                     car.GetComponent<CarControllerAdvanced>()/*.enabled = false*/;
                 }
 
-                //GameObject.Find("YellowCar 1").GetComponent<CarControllerAdvanced>().enabled = false;
+                //GameObject.Find("StartCar").GetComponent<CarControllerAdvanced>().enabled = false;
                 ShowEnemyText.SetActive(true);
                 StartCoroutine(LoadEnemytextAfterDelay(delay));
                 FadeInToLevel.SetActive(true);
